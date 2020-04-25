@@ -15,7 +15,7 @@ class AddressBookTest {
     private String secondName3 = new String("Fire");
 
 
-    private Address address1 = new Address("Pushka", 11, 99);
+    private Address address1 = new Address("OldStreet", 11, 99);
     private Address address2 = new Address("Street", 1, 9);
     private Address address3 = new Address("NewStreet", 10, 55);
 
@@ -80,8 +80,8 @@ class AddressBookTest {
         actualSecondNames.add("Ice");
         actualSecondNames.add("Lava");
         actualSecondNames.add("Fire");
-        assertEquals(actualSecondNames, actualInfo.listSecondNamesByStreet("Pushka"));
-        System.out.println(actualInfo.listSecondNamesByStreet("Pushka"));
+        assertEquals(actualSecondNames, actualInfo.listSecondNamesByStreet("OldStreet"));
+        System.out.println(actualInfo.listSecondNamesByStreet("OldStreet"));
     }
 
     @Test
@@ -94,7 +94,7 @@ class AddressBookTest {
         actualSecondNames.add("Ice");
         actualSecondNames.add("Lava");
         actualSecondNames.add("Fire");
-        assertEquals(actualSecondNames, actualInfo.listSecondNamesByStreetAndHouse("Pushka", 11));
-        System.out.println(actualInfo.listSecondNamesByStreet("Pushka"));
+        assertEquals(actualSecondNames, actualInfo.listSecondNamesByStreetAndHouse("OldStreet", 11));
+        System.out.println(actualInfo.listSecondNamesByStreet("OldStreet"));
     }
 }
