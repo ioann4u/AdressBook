@@ -32,7 +32,7 @@ public class Address {
 
     @Override
     public String toString() {
-        return "    ул. " + street + " д. " + house + " кв. " + flat + System.lineSeparator();
+        return "ул. " + street + " д. " + house + " кв. " + flat + System.lineSeparator();
     }
 
     @Override

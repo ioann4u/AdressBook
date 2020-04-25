@@ -53,7 +53,7 @@ public class AddressBook {
         StringBuilder result = new StringBuilder();
 
         for (Map.Entry<String, Address> res : addressBook.entrySet()) {
-            result.append(res.getKey()).append(res.getValue());
+            result.append(res.getKey()).append(": ").append(res.getValue());
         }
 
         return result.toString();

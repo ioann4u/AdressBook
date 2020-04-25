@@ -29,6 +29,9 @@ class AddressBookTest {
         expectedInfo.add(secondName1, address1);
         expectedInfo.add(secondName2, address2);
         assertEquals(expectedInfo, actualInfo);
+        AddressBook addressBook = new AddressBook();
+        assertTrue(addressBook.add("personP1", address1));
+        //assertFalse(addressBook.add("personP1", address1)), assertEquals(addressBook.get("personP1"), address1);
         System.out.println(actualInfo.toString());
     }
 
