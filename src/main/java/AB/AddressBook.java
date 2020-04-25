@@ -7,18 +7,25 @@ import java.util.Objects;
 public class AddressBook {
     private HashMap<String, Address> addressBook = new HashMap<String, Address>();
 
-    public void add(String secondName, Address address) {
-        addressBook.put(secondName, address);
+    public boolean add(String secondName, Address address) {
+        if (addressBook.containsKey(secondName))
+            return false;
+            addressBook.put(secondName, address);
+        return true;
     }
 
-    public void dell(String secondName) {
-        //if (!addressBook.containsKey(secondName))
-             //false;
+    public boolean dell(String secondName) {
+        if (!addressBook.containsKey(secondName))
+             return false;
         addressBook.remove(secondName);
+        return true;
     }
 
-    public void changeAddress(String secondName, Address newAddress) {
+    public boolean changeAddress(String secondName, Address newAddress) {
+        if (!addressBook.containsKey(secondName))
+            return false;
         addressBook.replace(secondName, newAddress);
+        return true;
     }
 
     public Address findAddress(String secondName) {

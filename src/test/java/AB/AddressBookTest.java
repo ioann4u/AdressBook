@@ -62,5 +62,5 @@ class AddressBookTest {
         System.out.println(actualInfo.findAddress(secondName1).toString());
     }
 
-    
+
 }
