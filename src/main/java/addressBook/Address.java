@@ -1,6 +1,5 @@
-package AB;
+package addressBook;
 
-import java.io.File;
 import java.util.Objects;
 
 public class Address {

@@ -1,18 +1,17 @@
-package AB;
+package addressBook;
 
 import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;
-import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class AddressBookTest {
 
     //correct values
-    private String secondName1 = new String("Ice");
-    private String secondName2 = new String("Lava");
-    private String secondName3 = new String("Fire");
+    private String secondName1 = "Ice";
+    private String secondName2 = "Lava";
+    private String secondName3 = "Fire";
 
 
     private Address address1 = new Address("OldStreet", 11, 99);
