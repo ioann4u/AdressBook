@@ -1,8 +1,6 @@
 package AB;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 
 public class AddressBook {
     private HashMap<String, Address> addressBook = new HashMap<String, Address>();
@@ -32,8 +30,22 @@ public class AddressBook {
         return addressBook.get(secondName);
     }
 
-    HashMap<String, Address> getAddressBook() {
-        return addressBook;
+    public Set listSecondNamesByStreet(String street) {
+        HashSet<String> secondNames = new HashSet<>();
+        for (Map.Entry<String, Address> entry : addressBook.entrySet()) {
+            if (entry.getValue().getStreet().equals(street))
+                secondNames.add(entry.getKey());
+        }
+        return secondNames;
+    }
+
+    public Set listSecondNamesByStreetAndHouse(String street, int house) {
+        HashSet<String> secondNames = new HashSet<>();
+        for (Map.Entry<String, Address> entry : addressBook.entrySet()) {
+            if (entry.getValue().getStreet().equals(street) && entry.getValue().getHouse() == house)
+                secondNames.add(entry.getKey());
+        }
+        return secondNames;
     }
 
     @Override

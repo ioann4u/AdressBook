@@ -1,5 +1,6 @@
 package AB;
 
+import java.io.File;
 import java.util.Objects;
 
 public class Address {
@@ -32,7 +33,7 @@ public class Address {
 
     @Override
     public String toString() {
-        return "    ул. " + street + " д. " + house + " кв. " + flat + "\n";
+        return "    ул. " + street + " д. " + house + " кв. " + flat + File.separator;
     }
 
     @Override
